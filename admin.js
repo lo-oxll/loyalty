@@ -116,6 +116,11 @@
     if (d.whatsapp && !/^\+?\d{8,15}$/.test(d.whatsapp)) throw new Error("رقم واتساب غير صالح.");
     if (d.ordersUrl && !Store.base(d)) throw new Error("رابط قاعدة الطلبات يجب أن يكون https://....firebasedatabase.app");
     const out = JSON.parse(JSON.stringify(d)), L = out.loyalty;
+    // تنظيف المدخلات: رموز اتجاه مخفية، مسافات، علامات اقتباس، أرقام عربية
+    const strip = (v) => String(v == null ? "" : v).replace(/[\u200e\u200f\u202a-\u202e\u2066-\u2069\u00a0\s`"']/g, "");
+    const dig = (v) => strip(v).replace(/[٠-٩]/g, (c) => c.charCodeAt(0) - 1632).replace(/٫/g, ".");
+    L.lat = dig(L.lat); L.lng = dig(L.lng); L.vapidPublic = strip(L.vapidPublic); L.apiKey = strip(L.apiKey);
+    if (L.apiKey && !/^AIza[0-9A-Za-z_-]{30,50}$/.test(L.apiKey)) throw new Error("Firebase Web API Key غير صالح: يبدأ بـ AIza وليس رابطاً.");
     const tg = Math.round(Number(L.target));
     if (!(tg >= 1 && tg <= 20)) throw new Error("عدد الزيارات قبل المجانية: من 1 إلى 20.");
     if (!(L.radius >= 20 && L.radius <= 5000)) throw new Error("مسافة التنبيه: من 20 إلى 5000 متر.");
