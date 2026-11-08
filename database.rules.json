@@ -1,0 +1,40 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "orders": { ".read": true, ".write": true },
+    "staff": { ".read": false, ".write": false },
+    "loyalty": {
+      "c": {
+        ".read": "auth != null && root.child('staff').child(auth.uid).val() === true",
+        ".indexOn": ["c"],
+        "$id": {
+          ".read": true,
+          ".write": "(auth != null && root.child('staff').child(auth.uid).val() === true) || (!data.exists() && newData.child('v').val() === 0 && newData.child('t').val() === 0 && newData.child('f').val() === 0 && !newData.child('last').exists() && !newData.child('nt').exists())",
+          ".validate": "newData.hasChildren(['n', 'c', 'v', 't', 'f', 'created'])",
+          "n": { ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 40" },
+          "c": { ".validate": "newData.isString() && newData.val().length === 8" },
+          "v": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 50" },
+          "t": { ".validate": "newData.isNumber() && newData.val() >= 0" },
+          "f": { ".validate": "newData.isNumber() && newData.val() >= 0" },
+          "last": { ".validate": "newData.isNumber()" },
+          "created": { ".validate": "newData.isNumber()" },
+          "nt": { ".validate": "newData.isNumber()" },
+          "$other": { ".validate": false }
+        }
+      },
+      "sub": {
+        "$id": {
+          ".read": false,
+          ".write": "root.child('loyalty').child('c').child($id).exists()",
+          ".validate": "newData.isString() && newData.val().length < 2000"
+        }
+      },
+      "log": {
+        ".read": "auth != null && root.child('staff').child(auth.uid).val() === true",
+        ".write": "auth != null && root.child('staff').child(auth.uid).val() === true",
+        "$k": { ".validate": "newData.hasChildren(['id', 't', 'a'])" }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#c8102e">
+<title>لوحة المدير</title>
+<link rel="stylesheet" href="cairo.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="adm" id="app" hidden>
+  <div class="rowf" style="justify-content:space-between"><h1>لوحة المدير</h1><a href="index.html">العودة للصفحة</a></div>
+
+  <section class="card">
+    <h2>استيراد data.json (اختياري)</h2>
+    <input type="file" id="importFile" accept="application/json,.json" aria-label="استيراد">
+  </section>
+
+  <section class="card">
+    <h2>الألوان</h2>
+    <div class="two">
+      <div><label for="cPrimary">لون النظام</label><input type="color" id="cPrimary"></div>
+      <div><label for="cText">لون الخط</label><input type="color" id="cText"></div>
+    </div>
+    <button class="btn ghost sm" id="cReset" type="button" style="margin-top:10px">أحمر وأبيض (الافتراضي)</button>
+    <p class="hint">الخلفية بيضاء دائماً. اختر لون خط داكناً ليبقى مقروءاً.</p>
+  </section>
+
+  <section class="card">
+    <h2>الهوية والتواصل</h2>
+    <img class="prev" id="logoPrev" alt="" hidden>
+    <label for="logoFile">صورة المطعم</label>
+    <input type="file" id="logoFile" accept="image/jpeg,image/png,image/webp">
+    <button class="btn ghost sm" id="logoRm" type="button" style="margin-top:8px">إزالة الصورة</button>
+    <div id="fields"></div>
+  </section>
+
+  <section class="card">
+    <h2>نظام الولاء</h2>
+    <div id="loyFields"></div>
+    <p class="hint">خط العرض والطول من خرائط Google (اضغط مطولاً على موقع الكافيه). اتركهما فارغين لتعطيل تنبيه القرب.</p>
+  </section>
+
+  <section class="card">
+    <h2>حماية لوحة المدير</h2>
+    <label for="pwA">كلمة سر لوحة المدير (اختياري)</label>
+    <input type="password" id="pwA" autocomplete="new-password">
+    <p class="hint">8 أحرف على الأقل. المعروض في data.json ناتج تشفير فقط، لكنه ملف عام: استخدم كلمة طويلة.</p>
+  </section>
+
+  <section>
+    <h2 style="margin-bottom:10px">قائمة الطعام</h2>
+    <div id="menuEd"></div>
+    <button class="btn ghost block" id="addCat" type="button" style="margin-top:10px">إضافة قسم</button>
+    <p class="hint">الصور تُصغَّر إلى 640 بكسل وتُحفظ داخل data.json.</p>
+  </section>
+
+  <p class="msg" id="msg" role="alert"></p>
+  <button class="btn block" id="save" type="button">تنزيل ملف data.json</button>
+  <button class="btn ghost block" id="copy" type="button">نسخ المحتوى</button>
+  <p class="hint">ارفع data.json إلى مستودع GitHub مستبدلاً القديم؛ تظهر التغييرات بعد دقيقة أو دقيقتين.</p>
+</main>
+<script src="common.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

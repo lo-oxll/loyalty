@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; media-src 'self' blob:; connect-src 'self' https://*.firebasedatabase.app https://*.firebaseio.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#01c7fc">
+<title>تسجيل الزيارات</title>
+<link rel="stylesheet" href="cairo.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="loyalty.css">
+</head>
+<body>
+<main class="loy">
+  <h1 id="title">تسجيل الزيارات</h1>
+  <p class="msg" id="err" role="alert"></p>
+
+  <form id="login" class="card" hidden novalidate>
+    <h2>دخول الكاشير</h2>
+    <label for="em">البريد الإلكتروني</label>
+    <input id="em" type="email" class="ltr" autocomplete="username" required>
+    <label for="pw">كلمة السر</label>
+    <input id="pw" type="password" autocomplete="current-password" required>
+    <button class="btn block" id="loginBtn" type="submit" style="margin-top:10px">دخول</button>
+  </form>
+
+  <section id="app" hidden>
+    <div class="card" style="display:flex;flex-direction:column;gap:10px">
+      <button class="btn block" id="scan" type="button">مسح بطاقة العميل</button>
+      <div id="cam" hidden><video id="vid" class="vid" playsinline muted></video><button class="btn ghost block" id="stop" type="button" style="margin-top:8px">إيقاف الكاميرا</button></div>
+      <form id="manual" novalidate>
+        <label for="code">أو اكتب رمز البطاقة (8 خانات)</label>
+        <div class="rowf"><input id="code" class="ltr" maxlength="8" autocapitalize="characters" autocomplete="off" spellcheck="false"><button class="btn" type="submit">بحث</button></div>
+      </form>
+    </div>
+    <article class="card res" id="res" hidden>
+      <h2 id="rName"></h2>
+      <div class="stamps" id="rStamps"></div>
+      <p class="hint" id="rInfo"></p>
+      <button class="btn block" id="act" type="button"></button>
+    </article>
+    <button class="btn ghost block" id="out" type="button" style="margin-top:12px">تسجيل الخروج</button>
+  </section>
+</main>
+<script src="common.js"></script>
+<script src="loyalty-core.js"></script>
+<script src="jsqr.js"></script>
+<script src="stamp.js"></script>
+</body>
+</html>

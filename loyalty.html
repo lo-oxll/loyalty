@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; manifest-src 'self'; connect-src 'self' https://*.firebasedatabase.app https://*.firebaseio.com; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#01c7fc">
+<meta name="robots" content="noindex,nofollow">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>بطاقة الولاء</title>
+<link rel="stylesheet" href="cairo.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="loyalty.css">
+</head>
+<body>
+<main class="loy">
+  <p id="boot" class="hint" style="text-align:center">جارٍ التحميل…</p>
+
+  <section id="off" class="card" hidden>
+    <h2>نظام الولاء غير مفعّل</h2>
+    <p class="hint">يلزم ضبط رابط قاعدة Firebase من لوحة المدير.</p>
+  </section>
+
+  <form id="reg" class="card" hidden novalidate>
+    <h1 id="regTitle">بطاقة الولاء</h1>
+    <p id="regInfo" class="hint"></p>
+    <p id="iosTip" class="tip" hidden>على الآيفون: اضغط زر المشاركة ثم «إضافة إلى الشاشة الرئيسية»، وافتح البطاقة من الأيقونة، ثم سجّل اسمك. هكذا تبقى بطاقتك محفوظة وتصلك التنبيهات.</p>
+    <label for="nm">اسمك</label>
+    <input id="nm" maxlength="40" autocomplete="name" required>
+    <p class="msg" id="regErr" role="alert"></p>
+    <button class="btn block" id="regBtn" type="submit">إنشاء بطاقتي</button>
+  </form>
+
+  <section id="cardBox" hidden>
+    <article class="lcard" aria-label="بطاقة الولاء">
+      <header>
+        <div class="lg" id="lg" aria-hidden="true"></div>
+        <div><b id="cafe"></b><div class="who" id="who"></div></div>
+      </header>
+      <div class="stamps" id="stamps" role="img"></div>
+      <p class="prog" id="prog" role="status"></p>
+      <div class="qr" id="qr" role="img" aria-label="رمز البطاقة"></div>
+      <p class="code ltr" id="code"></p>
+      <p class="foot" id="foot"></p>
+    </article>
+    <div class="acts2">
+      <button class="btn ghost block" id="alerts" type="button" hidden>تفعيل التنبيهات</button>
+      <button class="btn ghost block" id="install" type="button" hidden>إضافة البطاقة للشاشة الرئيسية</button>
+    </div>
+    <p class="hint" id="alertHint"></p>
+  </section>
+  <p class="msg" id="msg" role="alert"></p>
+</main>
+<script src="common.js"></script>
+<script src="loyalty-core.js"></script>
+<script src="qrcode.js"></script>
+<script src="loyalty.js"></script>
+</body>
+</html>

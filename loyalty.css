@@ -1,0 +1,24 @@
+.loy{max-width:440px;margin:0 auto;padding:max(20px,env(safe-area-inset-top)) 16px 40px;display:flex;flex-direction:column;gap:14px}
+.loy h1{font-size:1.5rem;font-weight:800}.loy h2{font-size:1.15rem}
+.loy form.card{display:flex;flex-direction:column;gap:6px}
+.tip{background:var(--soft);border-radius:12px;padding:10px 12px;font-size:.9rem}
+.lcard{background:linear-gradient(145deg,var(--primary),color-mix(in srgb,var(--primary) 70%,#000));color:var(--ink);border-radius:24px;padding:20px;box-shadow:0 10px 30px color-mix(in srgb,var(--primary) 35%,transparent);display:flex;flex-direction:column;gap:14px}
+.lcard header{display:flex;align-items:center;gap:12px;font-size:1.2rem}
+.lcard .lg{width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--primary);display:grid;place-items:center;font-weight:800;overflow:hidden;flex:none}
+.lcard .lg img{width:100%;height:100%;object-fit:cover}
+.lcard .who{font-size:.95rem;opacity:.9;font-weight:600}
+.stamps{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.st{aspect-ratio:1;border-radius:50%;border:2px dashed color-mix(in srgb,var(--ink) 70%,transparent);display:grid;place-items:center;font-weight:800;font-size:1.05rem;opacity:.85}
+.st.on{background:var(--ink);color:var(--primary);border-style:solid;opacity:1}
+.st.gift{font-size:.72rem;border-style:solid}
+.prog{font-weight:700;text-align:center}
+.qr{background:#fff;border-radius:16px;padding:10px;width:min(220px,70%);margin:0 auto}
+.qr svg{display:block;width:100%;height:auto}
+.code{text-align:center;font-weight:800;letter-spacing:.2em;font-size:1.05rem}
+.lcard .foot{text-align:center;font-size:.85rem;opacity:.9}
+.acts2{display:flex;flex-direction:column;gap:10px}
+@media (prefers-reduced-motion:no-preference){.st.on{animation:pop .3s ease-out}@keyframes pop{from{transform:scale(.7)}to{transform:scale(1)}}}
+.vid{width:100%;border-radius:14px;background:#000;aspect-ratio:1;object-fit:cover}
+.res{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.res .st{color:var(--text);border-color:var(--line)}
+.res .st.on{background:var(--primary);color:var(--ink);border-color:var(--primary)}

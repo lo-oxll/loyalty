@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://*.firebasedatabase.app https://*.firebaseio.com; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2716%27 fill=%27%23c8102e%27/%3E%3C/svg%3E">
+<title>القائمة وحساباتنا</title>
+<meta name="description" content="القائمة الإلكترونية والطلب، ساعات العمل، الموقع، وحساباتنا على مواقع التواصل">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_IQ">
+<meta property="og:title" content="فرايد چكن — القائمة وحساباتنا">
+<meta property="og:url" content="https://lo-oxll.github.io/ScanMenu/">
+<meta property="og:image" content="https://lo-oxll.github.io/ScanMenu/og-image.jpg">
+<meta name="theme-color" content="#c8102e">
+<link rel="stylesheet" href="cairo.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="home">
+  <div class="logo" id="logo" aria-hidden="true"></div>
+  <h1 id="name">اسم المطعم</h1>
+  <p class="tag" id="tagline" hidden></p>
+  <div class="bar3">
+    <button class="btn ghost sm" id="contactBtn" type="button" aria-expanded="false" aria-controls="contactBox" hidden>للتواصل</button>
+    <div class="status" id="status" role="status" hidden></div>
+    <a class="btn ghost sm" id="mapBtn" target="_blank" rel="noopener" hidden>الموقع</a>
+  </div>
+  <div class="pills" id="contactBox" hidden></div>
+  <a class="btn cta" href="loyalty.html">بطاقة الولاء</a>
+  <button class="btn ghost" id="wifi" type="button" hidden></button>
+  <div class="menu-list" id="menu"></div>
+  <p class="hint" id="foot"></p>
+</main>
+<button class="btn" id="bar" type="button" hidden>
+  <span id="barN"></span><span>عرض السلة</span><span id="barT"></span>
+</button>
+
+<dialog id="sheet" aria-label="السلة">
+  <div class="sheet" id="form">
+    <h2>سلتك</h2>
+    <div id="lines"></div>
+    <div class="seg" role="group" aria-label="نوع الطلب">
+      <button type="button" data-t="hall" aria-pressed="true">في الصالة</button>
+      <button type="button" data-t="out" aria-pressed="false">سفري</button>
+    </div>
+    <div id="tableBox">
+      <label for="table">رقم الطاولة</label>
+      <input id="table" type="number" inputmode="numeric" min="1" max="999" placeholder="مثال: 5">
+    </div>
+    <div>
+      <label for="note">ملاحظات (اختياري)</label>
+      <textarea id="note" maxlength="200"></textarea>
+    </div>
+    <div class="tot"><span>المجموع</span><span id="total"></span></div>
+    <p class="msg" id="err" role="alert"></p>
+    <button class="btn block" id="send" type="button"></button>
+    <button class="btn ghost block" id="close" type="button">متابعة الاختيار</button>
+  </div>
+  <div class="sheet" id="done" hidden>
+    <h2>تم استلام طلبك</h2>
+    <div class="big" id="doneNum"></div>
+    <p id="doneMsg" class="hint" style="text-align:center;font-size:1rem"></p>
+    <a class="btn block" id="waBtn" target="_blank" rel="noopener" hidden>فتح واتساب لإرسال الطلب</a>
+    <button class="btn ghost block" id="doneClose" type="button">إغلاق</button>
+  </div>
+</dialog>
+
+<script src="common.js"></script>
+<script src="menu.js"></script>
+<script src="home.js"></script>
+</body>
+</html>
