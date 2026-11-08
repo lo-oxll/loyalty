@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://*.firebasedatabase.app https://*.firebaseio.com; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#c8102e">
+<title>المنيو</title>
+<link rel="stylesheet" href="cairo.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1 id="name">المنيو</h1>
+  <p>اختر وجباتك واطلب · الأسعار بالدينار العراقي</p>
+  <input id="q" type="search" placeholder="ابحث عن وجبة أو صنف" aria-label="بحث">
+</header>
+<nav id="tabs" aria-label="الأقسام"></nav>
+<main class="menu" id="menu"></main>
+<footer id="foot"></footer>
+
+<button class="btn" id="bar" type="button" hidden>
+  <span id="barN"></span><span>عرض السلة</span><span id="barT"></span>
+</button>
+
+<dialog id="sheet" aria-label="السلة">
+  <div class="sheet" id="form">
+    <h2>سلتك</h2>
+    <div id="lines"></div>
+    <div class="seg" role="group" aria-label="نوع الطلب">
+      <button type="button" data-t="hall" aria-pressed="true">في الصالة</button>
+      <button type="button" data-t="out" aria-pressed="false">سفري</button>
+    </div>
+    <div id="tableBox">
+      <label for="table">رقم الطاولة</label>
+      <input id="table" type="number" inputmode="numeric" min="1" max="999" placeholder="مثال: 5">
+    </div>
+    <div>
+      <label for="note">ملاحظات (اختياري)</label>
+      <textarea id="note" maxlength="200"></textarea>
+    </div>
+    <div class="tot"><span>المجموع</span><span id="total"></span></div>
+    <p class="msg" id="err" role="alert"></p>
+    <button class="btn block" id="send" type="button"></button>
+    <button class="btn ghost block" id="close" type="button">متابعة الاختيار</button>
+  </div>
+  <div class="sheet" id="done" hidden>
+    <h2>تم استلام طلبك</h2>
+    <div class="big" id="doneNum"></div>
+    <p id="doneMsg" class="hint" style="text-align:center;font-size:1rem"></p>
+    <a class="btn block" id="waBtn" target="_blank" rel="noopener" hidden>فتح واتساب لإرسال الطلب</a>
+    <button class="btn ghost block" id="doneClose" type="button">إغلاق</button>
+  </div>
+</dialog>
+
+<script src="common.js"></script>
+<script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+{
+  "name": "رمانة",
+  "tagline": "وعلي كلشي مانبيع بس نجرب الموقع",
+  "logo": "data:image/jpeg;base64,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",
+  "menu": "menu.pdf",
+  "instagram": "https://www.instagram.com/lo_oxll",
+  "facebook": "https://www.facebook.com/share/1Ffhaq3Jcd/?mibextid=wwXIfr",
+  "tiktok": "https://www.tiktok.com/@lo_oxll",
+  "map": "https://maps.app.goo.gl/qUgJfar2gVToHCxB6",
+  "phone": "+9647714623377",
+  "whatsapp": "+9647714623377",
+  "whatsappMessage": "مرحباً، أريد الطلب من القائمة",
+  "wifi": {
+    "name": "لاتكنك",
+    "password": "00000000"
+  },
+  "timezone": "Asia/Baghdad",
+  "hours": [
+    "10:00-03:00",
+    "10:00-03:00",
+    "10:00-03:00",
+    "10:00-03:00",
+    "10:00-03:00",
+    "10:00-03:00",
+    "10:00-03:00"
+  ],
+  "categories": [
+    {
+      "id": "meals",
+      "name": "الوجبات",
+      "items": [
+        {
+          "id": "mea1",
+          "name": "وجبة كرسبي ميني",
+          "desc": "2 قطع دجاج مقرمش، صمون، سلطة كول سلو، علبة بطاطا مقلية، ثومية وكوكاكولا.",
+          "price": 7500,
+          "img": ""
+        },
+        {
+          "id": "mea2",
+          "name": "وجبة كرسبي",
+          "desc": "3 قطع دجاج مقرمش، صمون، سلطة كول سلو، علبة بطاطا مقلية، ثومية وكوكاكولا.",
+          "price": 9000,
+          "img": ""
+        },
+        {
+          "id": "mea3",
+          "name": "وجبة ستربس",
+          "desc": "5 قطع دجاج ستربس، صمون، سلطة كول سلو، علبة بطاطا مقلية، ثومية وكوكاكولا.",
+          "price": 9000,
+          "img": ""
+        },
+        {
+          "id": "mea4",
+          "name": "وجبة كرسبي عائلية",
+          "desc": "10 قطع دجاج مقرمش، صمون، 3 سلطة كول سلو، علبة بطاطا مقلية، 3 ثومية وكوكاكولا عائلي.",
+          "price": 25000,
+          "img": ""
+        },
+        {
+          "id": "mea5",
+          "name": "وجبة ستربس عائلي",
+          "desc": "15 قطعة ستربس، علبة بطاطا حجم عائلي، 3 علب كول سلو، 3 علب صلصة ثوم، 10 قطع صمون، علبة كولا عائلي.",
+          "price": 25000,
+          "img": ""
+        },
+        {
+          "id": "mea6",
+          "name": "وجبة كرسبي جامبو",
+          "desc": "14 قطع دجاج مقرمش، صمون، 4 سلطة كول سلو، علبة بطاطا مقلية، 4 ثومية وكوكاكولا عائلي.",
+          "price": 35000,
+          "img": ""
+        },
+        {
+          "id": "mea7",
+          "name": "وجبة كرسبي و ستربس",
+          "desc": "2 قطع دجاج مقرمش، 3 قطع دجاج ستربس، صمون، سلطة كول سلو، بطاطا مقلية، ثومية وكوكاكولا.",
+          "price": 10000,
+          "img": ""
+        },
+        {
+          "id": "mea8",
+          "name": "وجبة طفل صبي",
+          "desc": "قطعة كرسبي، قطعة ستربس، بطاطا مقلية، عصير.",
+          "price": 6000,
+          "img": ""
+        },
+        {
+          "id": "mea9",
+          "name": "وجبة طفل بنت",
+          "desc": "قطعة كرسبي، قطعة ستربس، بطاطا مقلية، عصير.",
+          "price": 6000,
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "name": "السندويتشات",
+      "items": [
+        {
+          "id": "san1",
+          "name": "سندويتش بيك ليفل",
+          "desc": "قطع دجاج مقرمشة، خس، حبش مدخن وصوص.",
+          "price": 6500,
+          "img": ""
+        },
+        {
+          "id": "san2",
+          "name": "سندويتش بيك ليفل إكسترا",
+          "desc": "2 قطع صدور دجاج مقرمشة، خس وصوص.",
+          "price": 8500,
+          "img": ""
+        },
+        {
+          "id": "san3",
+          "name": "سندويتش سيكرت",
+          "desc": "دجاج مقرمش، خس، جبنة سويسرية وصوص سيكرت.",
+          "price": null,
+          "img": ""
+        },
+        {
+          "id": "san4",
+          "name": "سندويتش ريد هوت",
+          "desc": "دجاج مقرمش، خس، جبنة شيدر وصوص سبايسي.",
+          "price": 6000,
+          "img": ""
+        },
+        {
+          "id": "san5",
+          "name": "سندويتش كلاسيك دائري",
+          "desc": "خبز فرنسي، صدر دجاج مقرمش، خس، جبنة سويس وصلصة المايونيز.",
+          "price": 6000,
+          "img": ""
+        },
+        {
+          "id": "san6",
+          "name": "سندويتش تويستر فيليه",
+          "desc": "خبز التورتيلا، قطع دجاج مقرمشة، خس، جبنة شيدر وصلصة فرايد تشكن.",
+          "price": 5000,
+          "img": ""
+        },
+        {
+          "id": "san7",
+          "name": "سندويش كرسبي فيليه",
+          "desc": "قطع دجاج مقرمشة، خس، جبنة شيدر وصوص دجاج مقلي.",
+          "price": 6000,
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": "rizo",
+      "name": "الريزو",
+      "items": [
+        {
+          "id": "riz1",
+          "name": "ريزو كلاسيك",
+          "desc": "رز اصفر، قطع دجاج مقرمش وصلصة كلاسيك.",
+          "price": 4000,
+          "img": ""
+        },
+        {
+          "id": "riz2",
+          "name": "ريزو أورجينال",
+          "desc": "رز اصفر، قطع دجاج مقرمش وصلصة اورجنال.",
+          "price": 4000,
+          "img": ""
+        },
+        {
+          "id": "riz3",
+          "name": "ريزو سبايسي",
+          "desc": "رز اصفر، قطع دجاج مقرمش وصلصة سبايسي.",
+          "price": 4000,
+          "img": ""
+        },
+        {
+          "id": "riz4",
+          "name": "ريزو اعشاب",
+          "desc": "رز اصفر، قطع دجاج مقرمش وصلصة الاعشاب.",
+          "price": 4000,
+          "img": ""
+        },
+        {
+          "id": "riz5",
+          "name": "ريزو سموكي",
+          "desc": "رز احمر، قطع دجاج مقرمش وصلصة مدخنة.",
+          "price": 4000,
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": "salad",
+      "name": "السلطة",
+      "items": [
+        {
+          "id": "sal1",
+          "name": "سلطة سيزر دجاج",
+          "desc": "قطع دجاج، خس، خبز محمص، جبنة بارميزان وصوص رانتش.",
+          "price": 5000,
+          "img": ""
+        },
+        {
+          "id": "sal2",
+          "name": "علبة سلطة كول سلو",
+          "desc": "لهانة، جزر ومايونيز.",
+          "price": 500,
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "الأطباق الجانبية",
+      "items": [
+        {
+          "id": "sid1",
+          "name": "اجنحة بصلصة الباربيكيو",
+          "desc": "8 قطع أجنحة دجاج مع صلصة الباربيكيو.",
+          "price": 6000,
+          "img": ""
+        },
+        {
+          "id": "sid2",
+          "name": "اجنحة بصلصة البافلو",
+          "desc": "8 قطع أجنحة دجاج مع صلصة بافلو.",
+          "price": 6000,
+          "img": ""
+        },
+        {
+          "id": "sid3",
+          "name": "اجنحة بصلصة هني ماسترد",
+          "desc": "8 قطع أجنحة دجاج مع صلصة هني ماسترد.",
+          "price": 6000,
+          "img": ""
+        },
+        {
+          "id": "sid4",
+          "name": "بطاطا ودجز",
+          "desc": "بطاطا ودجز مقلية.",
+          "price": 3000,
+          "img": ""
+        },
+        {
+          "id": "sid5",
+          "name": "حلقات بصل مقرمش",
+          "desc": "10 قطع من حلقات البصل المقرمشة.",
+          "price": 3000,
+          "img": ""
+        },
+        {
+          "id": "sid6",
+          "name": "قطعة ستربس",
+          "desc": "1 قطعة شرائح دجاج مقلية.",
+          "price": 1500,
+          "img": ""
+        },
+        {
+          "id": "sid7",
+          "name": "قطعة كرسبي",
+          "desc": "1 قطعة دجاج مقلي مقرمش.",
+          "price": 2500,
+          "img": ""
+        },
+        {
+          "id": "sid8",
+          "name": "بوب كورن دجاج",
+          "desc": "قطع دجاج مقرمشة مقلية.",
+          "price": 3000,
+          "img": ""
+        },
+        {
+          "id": "sid9",
+          "name": "ناجتس دجاج",
+          "desc": "5 قطع.",
+          "price": 3000,
+          "img": ""
+        },
+        {
+          "id": "sid10",
+          "name": "علبة بطاطا مقلية",
+          "desc": "اصابع البطاطا المقلية.",
+          "price": 2000,
+          "img": ""
+        },
+        {
+          "id": "sid11",
+          "name": "علبة بطاطا مقلية عائلية",
+          "desc": "اصابع البطاطا المقلية.",
+          "price": 3500,
+          "img": ""
+        },
+        {
+          "id": "sid12",
+          "name": "صمون فرنسي",
+          "desc": "6 قطع.",
+          "price": 1000,
+          "img": ""
+        },
+        {
+          "id": "sid13",
+          "name": "رز اصفر",
+          "desc": "طبق رز.",
+          "price": 3000,
+          "img": ""
+        },
+        {
+          "id": "sid14",
+          "name": "رز سموكي",
+          "desc": "طبق رز.",
+          "price": 3000,
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": "starters",
+      "name": "المقبلات",
+      "items": [
+        {
+          "id": "sta1",
+          "name": "علبة مقبلات",
+          "desc": "نوع واحد من المقبلات: حمص بطحينة أو الباذنجانية أو السلطة الروسية.",
+          "price": 2000,
+          "img": ""
+        },
+        {
+          "id": "sta2",
+          "name": "3 علب مقبلات مشكلة",
+          "desc": "حمص، باذنجانية وسلطة روسية.",
+          "price": 5000,
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": "sauces",
+      "name": "الصوصات",
+      "items": [
+        {
+          "id": "sau1",
+          "name": "صوص كولدن بز",
+          "desc": "Golden sauce",
+          "price": 1000,
+          "img": ""
+        },
+        {
+          "id": "sau2",
+          "name": "ثومية",
+          "desc": "ثوم، مايونيز، ليمون، ملح وفلفل أسود.",
+          "price": 500,
+          "img": ""
+        },
+        {
+          "id": "sau3",
+          "name": "صوص رانش",
+          "desc": "مايونيز، حليب، ملح، ثوم، بصل، خردل، اعشاب وتوابل.",
+          "price": 1000,
+          "img": ""
+        },
+        {
+          "id": "sau4",
+          "name": "صوص جبنة",
+          "desc": "مزيج غني وكريمي من جبنة الموزريلا، جبنة التشيدر، الحليب، الزبدة والتوابل.",
+          "price": 1000,
+          "img": ""
+        },
+        {
+          "id": "sau5",
+          "name": "صوص باربيكيو",
+          "desc": "كاتشب، خل، سكر، صلصة رسيستيرشاير، فلفل حار وثوم.",
+          "price": 1000,
+          "img": ""
+        },
+        {
+          "id": "sau6",
+          "name": "صوص فلفل حار حلو",
+          "desc": "الفلفل الحار، السكر، الخل، الثوم والزنجبيل.",
+          "price": 1000,
+          "img": ""
+        },
+        {
+          "id": "sau7",
+          "name": "صوص هني ماستر",
+          "desc": "",
+          "price": 1000,
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": "sweets",
+      "name": "الحلويات",
+      "items": [
+        {
+          "id": "swe1",
+          "name": "كوكيز",
+          "desc": "قطعة كوكيز لذيذة.",
+          "price": 2000,
+          "img": ""
+        },
+        {
+          "id": "swe2",
+          "name": "كوكيز شوكولاتة",
+          "desc": "قطعة كوكيز الشوكولاتة اللذيذة.",
+          "price": 2000,
+          "img": ""
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "المشروبات",
+      "items": [
+        {
+          "id": "dri1",
+          "name": "علبة كوكاكولا",
+          "desc": "مشروب غازي لذيذ.",
+          "price": 750,
+          "img": ""
+        },
+        {
+          "id": "dri2",
+          "name": "كوكاكولا عائلي",
+          "desc": "مشروب غازي لذيذ.",
+          "price": 1500,
+          "img": ""
+        }
+      ]
+    }
+  ],
+  "theme": {
+    "primary": "#01c7fc",
+    "text": "#1a0a52"
+  },
+  "minOrder": 3000,
+  "ordersUrl": "",
+  "cashierHash": "1cb0ac6edc556e86:e53c83e25fb753e28ab174bc01db07246200751b054c1f388e4586656d0e11ec",
+  "adminHash": "5edf41d80a2774ce:f5ec8e72ff8f7fb91506b6534abf0ae0412603ce82aed240c8f6b3cef2fc1374"
+}

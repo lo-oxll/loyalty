@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://*.firebasedatabase.app https://*.firebaseio.com; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#c8102e">
+<title>الكاشير</title>
+<link rel="stylesheet" href="cairo.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" hidden>
+  <div class="cbar">
+    <b id="title">الكاشير</b>
+    <label><input type="checkbox" id="auto"> طباعة تلقائية للطلبات الجديدة</label>
+  </div>
+  <p class="msg" id="err" role="alert" hidden style="padding:8px 16px">تعذّر الاتصال بقاعدة الطلبات. تتم إعادة المحاولة تلقائياً.</p>
+  <div class="ctabs" role="group" aria-label="تصفية">
+    <button type="button" data-tab="new" aria-pressed="true">الجديدة</button>
+    <button type="button" data-tab="done" aria-pressed="false">المنجزة</button>
+  </div>
+  <div class="cgrid" id="list"></div>
+</div>
+<div id="receipt" aria-hidden="true"></div>
+<script src="common.js"></script>
+<script src="cashier.js"></script>
+</body>
+</html>
